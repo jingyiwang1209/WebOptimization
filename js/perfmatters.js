@@ -12,3 +12,6 @@ function logCRP() {
 window.addEventListener("load", function(event) {
   logCRP();
 });
+
+var stateObj = { foo: "bar" };
+history.pushState(stateObj, "page project-2048", "project-2048.html");
