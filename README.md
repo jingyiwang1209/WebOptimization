@@ -13,3 +13,8 @@
 ## 4. Experiment in Pre-compositing a new layer for element(s) (with a constant change)
 
 ### I used 'will-change: transform' on the background of the page to inform the browser ahead that scroll position of the background will change in the future so that the browser can set up a proper optimization ahead without affecting other operations on the page or delaying the operation on the background. However,finally I got rid of 'will-change' because of its side effect - generating containing blocks for the pizzas (the decendents of the background) that were positioned fixed. The side effect disabled 'position:fixed' on those pizzas.
+
+## 5. Other details can be improved.
+### 1.Modified querySelector into getElementBy that runs faster;
+### 2.Automatically generated a certain number of pizzas based on the resolution of the screen: "var rows=window.screen.height/s;var num=rows*cols;"
+### 3. Declared variable out of the loops.
